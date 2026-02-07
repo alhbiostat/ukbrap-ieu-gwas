@@ -12,14 +12,13 @@ p22027 - heterozygosity and missingness rate outliers
 **Ancestry restrictions:**\
 p21000 - self reported ancestry
 
-**Relatedness:**
-`data.minimal_relateds.plink.txt` - maximum unrelated set of individuals
-`data.highly_relateds.[software].txt` - highly related samples to exclude
+**Relatedness:**\
+`data.minimal_relateds_81499.plink.txt` - exclude to retain maximum unrelated set of individuals
+`data.highly_relateds_81499.plink.txt` - exclude highly related individuals (>200 close <= 3rd degree relatives)
 
-
-
-
-
+Run:\
+`01_pullQCfields.sh` to pull fields from participant data\
+`02_writesamplelist.R` (run with `02a_run_writesamplelsit.R`) to generate list of samples to keep\
 
 ### 2. Extracting phenotypes/covariates
 

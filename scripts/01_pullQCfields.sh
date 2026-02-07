@@ -6,8 +6,6 @@
 # using dx-toolkit. To access UKB RAP data and software you must first be logged into the platform
 # with <dx-login> and have selected the appropriate project with <dx-select>
 
-
-
 # Run:
 # run using: ./01_pullQCfields.sh
 
@@ -17,8 +15,8 @@
 # Output:
 # ukb_QCfields.tsv
 
-# Ensure required input fields are uploaded to your files_dir in the RAP space prior to running using
-# dx upload ukb_QCfields.tsv --path=${files_dir}
+# Ensure required input files are uploaded to your files_dir in the RAP space prior to running using:
+# dx upload QCfields.txt --path=${files_dir}
 
 # ======================================================== #
 
@@ -33,6 +31,6 @@ dx run table-exporter \
 	-ientity="participant" \
 	-ifield_names_file_txt="${files_dir}/QCfields.txt" \
 	--instance-type "mem1_ssd1_v2_x4" \
-	--destination="${project}:${data_dir}" \
+	--destination="${project}:${files_dir}/" \
 	--priority="high" \
 	--brief --yes
